@@ -1,0 +1,16 @@
+﻿body {
+    background-color: lightblue;
+}
+
+nav {
+    display: inline-block;
+}
+
+.nav-item {
+    width: 100px;
+    display: inline-block;
+}
+
+#logo {
+    display:inline-block;
+}

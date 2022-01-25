@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1 id="logo">Logo</h1>
+        <nav>
+            <ul>
+                <li class="nav-item">@Html.ActionLink("About", "About", "Home")</li>
+                <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li class="nav-item">@Html.ActionLink("Projects", "Projects", "Home")</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <p>Tero Viitala @DateTime.Now.ToShortDateString()</p>
+    </footer>
+</body>
+</html>

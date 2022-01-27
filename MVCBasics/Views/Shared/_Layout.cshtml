@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 
-    <link href="~/Styles.css" rel="stylesheet" />
+    <link href="~/styles.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -15,6 +15,7 @@
                 <li class="nav-item">@Html.ActionLink("About", "About", "Home")</li>
                 <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home")</li>
                 <li class="nav-item">@Html.ActionLink("Projects", "Projects", "Home")</li>
+                <li class="nav-item">@Html.ActionLink("Fever Check", "FeverCheck", "Doctor")</li>
             </ul>
         </nav>
     </header>
@@ -26,5 +27,7 @@
     <footer>
         <p>Tero Viitala @DateTime.Now.ToShortDateString()</p>
     </footer>
+
+    <script src="~/main.js" type="text/javascript"></script>
 </body>
 </html>

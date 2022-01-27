@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "FeverCheck";
+}
+
+@if(ViewBag.Message != null){
+
+    <p>@ViewBag.Message</p>
+
+}
+
+<form asp-controller="Doctor" asp-action="FeverCheck" method="post" name="temperatureForm">
+    <input type="radio" id="temp-celcius" name="unit" value="celcius" onclick="handleClick(this)" checked="checked" />
+    <label for="temp-celcius">Celcius <span>&#8451</span></label><br />
+    <input type="radio" id="temp-farenheit" name="unit" value="farenheit" onclick="handleClick(this)" />
+    <label for="temp-farenheit">Farenheit <span>&#8457</span></label><br /><br />
+    <label>Temperature:</label>
+    <input type="number" id="temp-input" name="temperatureInput" value="37" />
+    <input type="submit" name="temperatureSubmit" value="Submit" />
+</form>

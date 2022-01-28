@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "SetSessionForGame";
+}
+
+<form asp-controller="Game" asp-action="SetSessionForGame" method="post">
+    <label>Namn:</label>
+    <input type="type" name="name" value="Skriv in ditt namn..." />
+    <input type="submit" name="submitName" value="Skicka" />
+</form>
+
+<p>@ViewBag.SessionMessage</p>

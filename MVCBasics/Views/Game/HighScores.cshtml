@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Leaderboard";
+}
+
+<h1>Leaderboard</h1>
+<p>Namn | Antal försök</p>
+
+@{string[] scoreArray = ViewBag.CookieValues.Split(',');}
+
+@{for (int s = 0; s < scoreArray.Length; s++)
+    {
+        <p>@scoreArray[s]</p>
+    }
+}

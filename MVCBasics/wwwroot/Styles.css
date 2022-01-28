@@ -7,8 +7,9 @@ nav {
 }
 
 .nav-item {
-    width: 100px;
+    width: 160px;
     display: inline-block;
+    text-align: center;
 }
 
 #logo {

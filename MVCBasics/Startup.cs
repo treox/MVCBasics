@@ -18,6 +18,7 @@ namespace MVCBasics
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<TemperatureChecker>();
+            services.AddSession();
             services.AddMvc();
         }
 
@@ -31,6 +32,7 @@ namespace MVCBasics
 
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
@@ -41,7 +43,13 @@ namespace MVCBasics
                 endpoints.MapControllerRoute(
                     name: "FeverCheck",
                     pattern: "FeverCheck",
-                    defaults: new { controller = "Doctor", action = "FeverCheck" });
+                    defaults: new { controller = "Doctor", action = "FeverCheck" }
+                );
+                endpoints.MapControllerRoute(
+                    name: "GuessingGame",
+                    pattern: "GuessingGame",
+                    defaults: new { controller = "Game", action = "GuessingGame" }
+                );
             });
         }
     }
